@@ -1,7 +1,7 @@
 API_ID       = 28475471
 API_HASH     = "ec7f0282f30eca233b11d3521dc67107"
 BOT_TOKEN    = "6213951376:AAHoTfvnzl77cKIkLXsUW0qPYlWFH2Y5xtw"
-SESSION      = ""
+SESSION      = "BQGygE8AZjeDBTbWdAR4LgUqn7NvwehrdFTn1-6q6CUm4O7KkhZlS-Tj3wVyb0VFs-3nU12TGFk3qxAvJqoK76owNm4KVrwGO0yr7Pma94QvP0k9fzt-bbAK0qcYS_GtkbIJ1x588lp8CBQCYQ3sRe1qwX0GuVhwbP7fR7M_c4pR7IKW68U40mhlV_RNQ1rPi7oz8LyNp8R8PppFHgLN7squzU2cysJN4Q0k1O_gpEaBYwrQc8uzhKlvpOZuG3DkZVH1e4DiyyP7avbqsCKtbyho_A2-1kGY9ayenp17LWKxN3mpfbky0F5sRM57kPaVAKKKQWgtBjdn9bOfTMip4bh0x5pYvgAAAAFeaS7iAA"
 DATABASE_URI = "mongodb+srv://jnanesh:jnanesh@cluster0.8pzxa6s.mongodb.net/?retryWrites=true&w=majority"
 LOG_CHANNEL  = -1001831347923
 ADMIN        = 5047601096
