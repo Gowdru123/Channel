@@ -25,14 +25,14 @@ async def search(bot, message):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>💬 {name}\n ➢ {msg.link}</I></b>\n\n <b><I>®️@ROCKERSBACKUP</b></I><\n><\n>"                                                      
+               results += f"<b><I>💬 {name}\n ➢ {msg.link}</I></b>\n\n <b><I>®️@ROCKERSBACKUP</b></I>"                                                      
        if bool(results)==False:
           movies = await search_imdb(query)
           buttons = []
           for movie in movies: 
               buttons.append([InlineKeyboardButton(movie['title'], callback_data=f"recheck_{movie['id']}")])
           msg = await message.reply_photo(photo="https://graph.org/file/8719f04a344128fbdead8.jpg",
-                                          caption="<b><I>Only  type  movie  name not type anything  like language  \n\n💬example :- avatar ✅\navatar English 🚫\n\nsealeact below button?</I></b>", 
+                                          caption="<b><I>Only  type  movie  name not type anything  like language  \n\n💬example :- avatar ✅\navatar English 🚫\n\nseleact below button?</I></b>", 
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
@@ -65,7 +65,7 @@ async def recheck(bot, update):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I> 💬 {name}</I></b>\n\n ➢ {msg.link}</I></b>\n\n <I><b>®️@ROCKERSBACKUP</I></b>\n\n"
+               results += f"<b><I> 💬 {name}</I></b>\n\n ➢ {msg.link}</I></b>\n\n <I><b>®️@ROCKERSBACKUP</I></b>"
        if bool(results)==False:          
           return await update.message.edit("Still no results found! Please Request To Group Admin", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
        await update.message.edit(text=head+results, disable_web_page_preview=True)
