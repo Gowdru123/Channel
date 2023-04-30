@@ -17,6 +17,7 @@ async def search(bot, message):
     if message.text.startswith("/"):
        return    
     query   = message.text 
+    head = "<u>Here is the results 👇\n\n"
     results = ""
     try:
        for channel in channels:
@@ -24,7 +25,7 @@ async def search(bot, message):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>🗨 {name}\n➢ {msg.link}</I></b>\n\n"                                                      
+               results += f"<b><I>🗨 {name}\n➢ {msg.link}</I></b>"                                                      
        if bool(results)==False:
           movies = await search_imdb(query)
           buttons = []
@@ -35,7 +36,7 @@ async def search(bot, message):
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
-       _time = (int(time()) + (10))
+       _time = (int(time()) + (10*10))
        await save_dlt_message(msg, _time)
     except:
        pass
@@ -64,7 +65,7 @@ async def recheck(bot, update):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>🗨 {name}</I></b>\n\n➢ {msg.link}</I></b>\n\n"
+               results += f"<b><I>🗨 {name}</I></b>\n\n➢ {msg.link}</I></b>"
        if bool(results)==False:          
           return await update.message.edit("Still no results found! Please Request To Group Admin", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
        await update.message.edit(text=head+results, disable_web_page_preview=True)
