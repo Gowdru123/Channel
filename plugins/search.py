@@ -17,7 +17,7 @@ async def search(bot, message):
     if message.text.startswith("/"):
        return    
     query   = message.text 
-    head = "<u>Here is the results 👇\n\n"
+    head = "<u>Here is the results ⬇️\n\n"
     results = ""
     try:
        for channel in channels:
@@ -25,18 +25,18 @@ async def search(bot, message):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>🗨 {name}\n➢ {msg.link}</I></b>"                                                      
+               results += f"<b><I>💬 {name}\n ➢ {msg.link}</I></b>\n\n <b><I>®️@ROCKERSBACKUP</b></I>"                                                      
        if bool(results)==False:
           movies = await search_imdb(query)
           buttons = []
           for movie in movies: 
               buttons.append([InlineKeyboardButton(movie['title'], callback_data=f"recheck_{movie['id']}")])
-          msg = await message.reply_photo(photo="https://telegra.ph/file/cf6706158b0bfaf436f54.jpg",
-                                          caption="<b><I>I Couldn't find anything related to Your Query😕.\nDid you mean any of these?</I></b>", 
+          msg = await message.reply_photo(photo="https://graph.org/file/8719f04a344128fbdead8.jpg",
+                                          caption="<b><I>Only  type  movie  name not type anything  like language  \n\n💬example :- avatar ✅\navatar English 🚫\n\nsealeact below button?</I></b>", 
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
-       _time = (int(time()) + (10*10))
+       _time = (int(time()) + (15*60))
        await save_dlt_message(msg, _time)
     except:
        pass
@@ -57,7 +57,7 @@ async def recheck(bot, update):
     id      = update.data.split("_")[-1]
     query   = await search_imdb(id)
     channels = (await get_group(update.message.chat.id))["channels"]
-    head    = "<u>💘 I Have Searched Movie With Wrong Spelling But Take care next time 💘 </u>"
+    head    = "<u> ⬇️ Here is ur movie ⬇️ </u>"
     results = ""
     try:
        for channel in channels:
@@ -65,7 +65,7 @@ async def recheck(bot, update):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>🗨 {name}</I></b>\n\n➢ {msg.link}</I></b>"
+               results += f"<b><I> 💬 {name}</I></b>\n\n ➢ {msg.link}</I></b>\n\n <I><b>®️@ROCKERSBACKUP</I></b>"
        if bool(results)==False:          
           return await update.message.edit("Still no results found! Please Request To Group Admin", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
        await update.message.edit(text=head+results, disable_web_page_preview=True)
@@ -90,4 +90,4 @@ async def request(bot, update):
     text  = f"#RequestFromYourGroup\n\nName: {name}\nIMDb: {url}"
     await bot.send_message(chat_id=admin, text=text, disable_web_page_preview=True)
     await update.answer("✅ Request Sent To Admin", show_alert=True)
-    await update.message.delete(60)
+    await update.message.delete(40)
