@@ -23,7 +23,7 @@ connections - Get connected channels list
 <details><summary>Deploy To Koyeb</summary>
 <p>
 <br>
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Gowdru123/Channel&branch=main">
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Gowdru123/Channel&branch=web">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="deploy-to-koyeb">
 </a>
 </p>
