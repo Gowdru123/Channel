@@ -1,8 +1,8 @@
-API_ID       = 
-API_HASH     = ""
-BOT_TOKEN    = ""
-SESSION      = ""
-DATABASE_URI = ""
-LOG_CHANNEL  = -1001884373226
-ADMIN        = 1350642629
-CHANNEL      = "@GreyMatter_Bots"
+API_ID       = 26072530
+API_HASH     = "177822ee51dc880e655e2c4aa0d4b147"
+BOT_TOKEN    = "6213951376:AAHoTfvnzl77cKIkLXsUW0qPYlWFH2Y5xtw"
+SESSION      = "BQGN1dIAsnC20ammRkdYj_aOWZqtTn0bydcZSqJ__bV4OoE5Av-MoxWY6Tqcqs6PMsxfPDQ9lOQZxkCXEh8Ob17S1tnOdlO5KaIvJHC5y5dzZ-J-ahJZiOFns400f-4uIUoknJPoF8Gv2xI3fJvBWzl85kWtUWXWSxfo52UpsMEoxSPImj1SFIT9cekqqdRf2wwBJ3hXqlEfZDtqlmRI4DcQdTnkL6x40q3kI-L7WIbs_Yo3qleSaUImJ1SUB9BMoHOqeSiXLZZN1AKgjzMZCtJdoE3w_2KME6mP9xpn8ywQgmepYgUKoyb95IfK48ofQSiD_Xf6JxahtY2GNPSvKne_gcoGpAAAAAFmCZf4AA"
+DATABASE_URI = "mongodb+srv://jnanesh:jnanesh@cluster0.8pzxa6s.mongodb.net/?retryWrites=true&w=majority"
+LOG_CHANNEL  = -1001831347923
+ADMIN        = 6006872056
+CHANNEL      = "@ROCKERSBACKUP"
