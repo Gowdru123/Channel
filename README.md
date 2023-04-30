@@ -23,3 +23,13 @@ connections - Get connected channels list
 <details><summary>Deploy To Koyeb</summary>
 
 [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/Gowdru123/Channel&branch=koyeb&name=Channel)
+
+## Deploy
+<details><summary>Deploy To Heroku</summary>
+<p>
+<br>
+<a href="https://heroku.com/deploy?template=https://github.com/Gowdru123/Channel/web">
+  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+</a>
+</p>
+</details>
