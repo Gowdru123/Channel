@@ -25,7 +25,7 @@ async def search(bot, message):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I>💬 {name}\n ➢ {msg.link}</I></b>\n\n <b><I>®️@ROCKERSBACKUP</b></I>"                                                      
+               results += f"<b><I>💬 {name}\n ➢ {msg.link}</I></b>\n\n <b><I>®️@ROCKERSBACKUP</b></I>\n"                                                      
        if bool(results)==False:
           movies = await search_imdb(query)
           buttons = []
@@ -36,7 +36,7 @@ async def search(bot, message):
                                           reply_markup=InlineKeyboardMarkup(buttons))
        else:
           msg = await message.reply_text(text=head+results, disable_web_page_preview=True)
-       _time = (int(time()) + (10*40))
+       _time = (int(time()) + (10*10))
        await save_dlt_message(msg, _time)
     except:
        pass
@@ -65,7 +65,7 @@ async def recheck(bot, update):
                name = (msg.text or msg.caption).split("\n")[0]
                if name in results:
                   continue 
-               results += f"<b><I> 💬 {name}</I></b>\n\n ➢ {msg.link}</I></b>\n\n <I><b>®️@ROCKERSBACKUP</I></b>"
+               results += f"<b><I> 💬 {name}</I></b>\n\n ➢ {msg.link}</I></b>\n\n <I><b>®️@ROCKERSBACKUP</I></b>/n"
        if bool(results)==False:          
           return await update.message.edit("Still no results found! Please Request To Group Admin", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎯 Request To Admin 🎯", callback_data=f"request_{id}")]]))
        await update.message.edit(text=head+results, disable_web_page_preview=True)
@@ -90,4 +90,4 @@ async def request(bot, update):
     text  = f"#RequestFromYourGroup\n\nName: {name}\nIMDb: {url}"
     await bot.send_message(chat_id=admin, text=text, disable_web_page_preview=True)
     await update.answer("✅ Request Sent To Admin", show_alert=True)
-    await update.message.delete(40)
+    await update.message.delete(30)
