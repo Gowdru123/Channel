@@ -5,4 +5,4 @@ SESSION      = "BQGN1dIAcM1CvUCqvSU8ka05_a8QJq3F3SbG1TIfcFB9bVXyYUyUMWggAnBA3MjM
 DATABASE_URI = "mongodb+srv://jnanesh:jnanesh@cluster0.8pzxa6s.mongodb.net/?retryWrites=true&w=majority"
 LOG_CHANNEL  = -1001831347923
 ADMIN        = 6006872056
-CHANNEL      = "@ROCKERSBACKUP"
+CHANNEL      = " "
